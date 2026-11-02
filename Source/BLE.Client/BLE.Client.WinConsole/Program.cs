@@ -14,6 +14,7 @@ using (var ct = new ConsoleTracer())
     Plugin.BLE.Abstractions.Trace.TraceImplementation = ct.GetPrefixedTrace("Plugin.BLE");
     var ppemos = new PluginDemos(ct.GetPrefixedTrace("      DEMO"));
     var wdemos = new WindowsDemos(ct.GetPrefixedTrace("      DEMO"));
+    var edemos = new EgooDemos(ct.GetPrefixedTrace("      DEMO"));
     var demoDict = new Dictionary<ConsoleKey, Demo>
     {
 
@@ -33,6 +34,7 @@ using (var ct = new ConsoleTracer())
         {ConsoleKey.E, new Demo("Device.BondState", ppemos.ShowBondState) },
         {ConsoleKey.A, new Demo("Pure Windows: Connect -> Disconnect", wdemos.Connect_Disconnect) },
         {ConsoleKey.S, new Demo("Pure Windows: Unpair all BLE devices", wdemos.UnPairAllBleDevices) },
+        {ConsoleKey.I, new Demo("Egoo: instrument, drawer and capsule info", edemos.Egoo_DEMO_Information) },
     };
 
     while (true)
