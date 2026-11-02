@@ -35,6 +35,7 @@ using (var ct = new ConsoleTracer())
         {ConsoleKey.A, new Demo("Pure Windows: Connect -> Disconnect", wdemos.Connect_Disconnect) },
         {ConsoleKey.S, new Demo("Pure Windows: Unpair all BLE devices", wdemos.UnPairAllBleDevices) },
         {ConsoleKey.I, new Demo("Egoo: instrument, drawer and capsule info", edemos.Egoo_DEMO_Information) },
+        {ConsoleKey.O, new Demo("Egoo: subscribe to all notify characteristics (timed)", edemos.Egoo_ALL_Services) },
     };
 
     while (true)
